@@ -85,7 +85,8 @@ m是由一个方法h传递2个参数构成
 我们可以这样在网络上随意找一张图片，拷贝其地址当做imgSteam
 这样有imgSteam有键值对，我们可以构建m有了m我们可以构建imgData,就可以生成绿色二维码
 如图
-![请添加图片描述](https://img-blog.csdnimg.cn/44c31bcf5b964d3596bde814235f3a43.png)
+![请添加图片描述](https://img-blog.csdnimg.cn/c7fad147bbe24d3f83d8257fdedbe19e.png)
+
 需要注意的是我们需要再onShow方法中构建
 
 ###  <2.寻找核酸检测时间
@@ -97,13 +98,18 @@ m是由一个方法h传递2个参数构成
 hsDay如果是0,1,2就显示单位小时，否则就显示单位天
 然后时间展示为hsjcsj(初步猜测为核酸检测时间)
 带着疑问前去js寻找
-![请添加图片描述](https://img-blog.csdnimg.cn/8e71fd26cb2f455ca2c2303d236f780c.png)
+我们在js中发现这样一段代码:
+![请添加图片描述](https://img-blog.csdnimg.cn/5dc2e14275a54fb9883f43309b637f21.png)
+
 通过源码查看我们可以大概猜测到hsDay如果是0，那么就会在hsObj中取出24，如果hs是1那么就会是48，
 带着疑问我们输入0看看是不是24小时
-![请添加图片描述](https://img-blog.csdnimg.cn/efb6c92c783c4ccaaba379916edd0bb2.png)
+![请添加图片描述](https://img-blog.csdnimg.cn/9940a2f23c6a45b680583b15f698dfc6.png)
+
 大家也都看到了，接下来还差一个检测时间:通过上一步分析我们已经知道检测时间参数是hsjcsj,
-那我们就在onShow中构建随意输入一个看看情况
-![请添加图片描述](https://img-blog.csdnimg.cn/0caea4cf9d334d028fd5271981427958.png)
+那我们就在onShow中构建随意输入一个看看情况!
+![请添加图片描述](https://img-blog.csdnimg.cn/f1cdf6581bec449daf9bed63e8a28eae.png)
+
+
 到这，我们对源代码首页中一些重要的信息进行了分析和修改，后期我们甚至可以加入我们自己的代码，在代码中进行手动的自定义设置核酸时间，设置检测时间，以及检测机构等各种信息~
 #    总结
 此文章仅限于对反编译教程的学习交流使用,并不会用于其它各种用途，本人也不上传任何形式的源代码。
