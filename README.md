@@ -78,14 +78,15 @@ m是由一个方法h传递2个参数构成
 ![请添加图片描述](https://img-blog.csdnimg.cn/afbf54bdc4004561876a08200f562f07.png)
 ![请添加图片描述](https://img-blog.csdnimg.cn/c1ab8dcc6b8d42cfb90ee6dd7859279e.png)
 ![请添加图片描述](https://img-blog.csdnimg.cn/b54995fbae91485192f4b27fff8fc18b.png)
+
 颜色很明显，到这为止我们可以构建出一个键值对，直接把里面的color写死，写成绿色，只需要在寻找到t.data.imgStream参数我们便可以自己构建绿码
 继续搜寻imgStream
 ![请添加图片描述](https://img-blog.csdnimg.cn/0975f1600b6e4541bbb612d604060c69.png)
-通过源码可知，imgStream是通过API：/hbjkm/code/createCode获取的，通过单词的imgStream反义可知是照片流!
+通过源码可知，imgStream是通过API：/hbjkm/code/createCode获取的，通过单词的imgStream翻译可知是照片流!
 我们可以这样在网络上随意找一张图片，拷贝其地址当做imgSteam
 这样有imgSteam有键值对，我们可以构建m有了m我们可以构建imgData,就可以生成绿色二维码
 如图
-![请添加图片描述](https://s2.loli.net/2022/12/07/YK5wcEohBL2vJTp.png)
+![请添加图片描述](https://s2.loli.net/2022/12/07/Nehd9HfJFSsE2Iw.png)
 
 需要注意的是我们需要再onShow方法中构建
 
