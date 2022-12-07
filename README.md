@@ -69,11 +69,11 @@ module.exports = _typeof;
 ![请添加图片描述](https://img-blog.csdnimg.cn/dfc467639dca40c7b96e27d592d07f78.png)
 完成上述步骤以后，接下来就是二维码，我们大家都知道二维码区分黄码，绿码，红码，从源代码中我们可以看到他是通过参数imgData获取并且展示的。接下来那么我们去js文件中寻找imgData参数，看看他是怎么获取，怎么使用的
 ![请添加图片描述](https://img-blog.csdnimg.cn/efdfe2bf8f804f8383ba93dbe1ad3958.png)
-通过inde.js源码分析可知：
-imgData是由m构成! 
-m是由一个方法h传递2个参数构成
-其中第一个参数是t.data.imgStream
-另一个参数是键值对形式{}
+通过inde.js源码分析可知：\n
+imgData是由m构成! \n
+m是由一个方法h传递2个参数构成\n
+其中第一个参数是t.data.imgStream\n
+另一个参数是键值对形式{}\n
 而我们发现{}中有color是通过f传递，而f有3种颜色分别是:f = "#39b778"  f = "#f5d000"  f = "#d8242b",那么我们把这3种颜色分别转换一下
 ![请添加图片描述](https://img-blog.csdnimg.cn/afbf54bdc4004561876a08200f562f07.png)
 ![请添加图片描述](https://img-blog.csdnimg.cn/c1ab8dcc6b8d42cfb90ee6dd7859279e.png)
