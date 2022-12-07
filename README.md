@@ -85,7 +85,7 @@ m是由一个方法h传递2个参数构成
 我们可以这样在网络上随意找一张图片，拷贝其地址当做imgSteam
 这样有imgSteam有键值对，我们可以构建m有了m我们可以构建imgData,就可以生成绿色二维码
 如图
-![请添加图片描述](https://img-blog.csdnimg.cn/c7fad147bbe24d3f83d8257fdedbe19e.png)
+![请添加图片描述](https://s2.loli.net/2022/12/07/YK5wcEohBL2vJTp.png)
 
 需要注意的是我们需要再onShow方法中构建
 
